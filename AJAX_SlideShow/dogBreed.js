@@ -19,9 +19,6 @@ function ajax() {
  * Create a new XMLHttpRequest instance.
 */
     let xhr = new XMLHttpRequest();
-
-
-
     xhr.onreadystatechange = function() {
 
         /*
@@ -82,20 +79,14 @@ function ajax() {
             }
             xhr = null;
         }
-
-
-
     };
 
     /*
     Opens a GET request connection with the server.
      */
     xhr.open("GET", "http://csw08724.appspot.com/breeds.ajax", true);
-
-
     xhr.send(null);
-
-
+    
     /*
     Select Listener method.
     Used to populate the Breed name.
@@ -123,7 +114,6 @@ function ajax() {
          */
         getInfo(options[index].id);
     }
-
 }
 
 /*
@@ -198,10 +188,7 @@ function getInfo(id) {
                             image.src = "http://csw08724.appspot.com/" + data.imageUrls[i];
                             image.style.width = "100%";
                        }
-
-
-
-
+                
                        /*
                        Count variable to iterate over the image array.
                        Gets reset to 1 if it exceeds the image array length, inside
@@ -236,20 +223,10 @@ function getInfo(id) {
                             timerID = setTimeout(SlideShow, 5000);
 
                         }
-
-
-
             } else {
                 alert("Error: " + xhr.status);
             }
-
-
-
             xhr = null;
-
-
-
-
         }
     };
 
@@ -258,8 +235,6 @@ function getInfo(id) {
      Passes the Id attribute to fetch the corresponding content.
      */
     xhr.open("GET", "http://csw08724.appspot.com/breed.ajax?id=" + id, true);
-
-
     xhr.send(null);
 }
 
